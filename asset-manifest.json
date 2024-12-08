@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/oasis-holiday-fantastic-/static/css/main.fac3e4d2.css",
-    "main.js": "/oasis-holiday-fantastic-/static/js/main.c4334e16.js",
+    "main.css": "/oasis-holiday-fantastic-/static/css/main.14fcd799.css",
+    "main.js": "/oasis-holiday-fantastic-/static/js/main.f56737ed.js",
     "static/js/453.4e0a267e.chunk.js": "/oasis-holiday-fantastic-/static/js/453.4e0a267e.chunk.js",
     "index.html": "/oasis-holiday-fantastic-/index.html",
-    "main.fac3e4d2.css.map": "/oasis-holiday-fantastic-/static/css/main.fac3e4d2.css.map",
-    "main.c4334e16.js.map": "/oasis-holiday-fantastic-/static/js/main.c4334e16.js.map",
+    "main.14fcd799.css.map": "/oasis-holiday-fantastic-/static/css/main.14fcd799.css.map",
+    "main.f56737ed.js.map": "/oasis-holiday-fantastic-/static/js/main.f56737ed.js.map",
     "453.4e0a267e.chunk.js.map": "/oasis-holiday-fantastic-/static/js/453.4e0a267e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fac3e4d2.css",
-    "static/js/main.c4334e16.js"
+    "static/css/main.14fcd799.css",
+    "static/js/main.f56737ed.js"
   ]
 }
