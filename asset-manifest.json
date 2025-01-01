@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/oasis-holiday-fantastic-/static/css/main.e6c13ad2.css",
-    "main.js": "/oasis-holiday-fantastic-/static/js/main.1305e0ee.js",
+    "main.js": "/oasis-holiday-fantastic-/static/js/main.3a0e2746.js",
     "static/js/453.4e0a267e.chunk.js": "/oasis-holiday-fantastic-/static/js/453.4e0a267e.chunk.js",
     "index.html": "/oasis-holiday-fantastic-/index.html",
     "main.e6c13ad2.css.map": "/oasis-holiday-fantastic-/static/css/main.e6c13ad2.css.map",
-    "main.1305e0ee.js.map": "/oasis-holiday-fantastic-/static/js/main.1305e0ee.js.map",
+    "main.3a0e2746.js.map": "/oasis-holiday-fantastic-/static/js/main.3a0e2746.js.map",
     "453.4e0a267e.chunk.js.map": "/oasis-holiday-fantastic-/static/js/453.4e0a267e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.1305e0ee.js"
+    "static/js/main.3a0e2746.js"
   ]
 }
