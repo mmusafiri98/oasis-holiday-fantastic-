@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis page sur notre offre de voyages pour république dominicaine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: rgb(40, 144, 170);
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            /* Garde les proportions */
+        }
+
+        .banner {
+            background: url('piscina.jpg') no-repeat center center/cover;
+            height: 300px;
+            position: relative;
+        }
+
+        .banner h2 {
+            color: white;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .filters {
+            width: 25%;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters h3 {
+            margin-top: 0;
+        }
+
+        .filters label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .filters input {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .results {
+            width: 75%;
+            padding: 20px;
+        }
+
+        .travel-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+
+        .travel-item img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .travel-item .details {
+            flex: 1;
+        }
+
+        .travel-item .details h4 {
+            margin: 0 0 10px;
+        }
+
+        .travel-item .details p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .travel-item .price {
+            color: #e60000;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Oasis</h1>
+        <img src="Logo Oasis .svg" alt="Logo Oasis Journeys" class="logo" />
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Séjours</a>
+            <a href="#">Clubs</a>
+            <a href="#">Les bons plans</a>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h2>Explore the Dominican Republic</h2>
+    </div>
+
+    <div class="container">
+        <aside class="filters">
+            <h3>Filters</h3>
+            <label for="price-range">Price Range</label>
+            <input type="range" id="price-range" min="745" max="2651" value="1500">
+
+            <label for="duration">Duration (days)</label>
+            <input type="number" id="duration" min="1" max="30" value="7">
+
+            <button id="apply-filters">Apply Filters</button>
+        </aside>
+
+        <section class="results">
+            <div class="travel-item">
+                <img src="dominican-republic.jpg" alt="Destination">
+                <div class="details">
+                    <h4>Coral Costa Caribe Juan Dolio 4*</h4>
+                    <p>Proximity to white sand beaches</p>
+                    <p>Lush vegetation and varied activities</p>
+                    <p class="price">€859</p>
+                </div>
+            </div>
+
+            <div class="travel-item">
+                <img src="travel.jpg" alt="Destination">
+                <div class="details">
+                    <h4>Bavaro Beach Resort</h4>
+                    <p>5-star luxury hotel with pools</p>
+                    <p>Includes meals and excursions</p>
+                    <p class="price">€1250</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('apply-filters').addEventListener('click', function () {
+            const price = document.getElementById('price-range').value;
+            const duration = document.getElementById('duration').value;
+            alert(`Filters applied:\nPrice: €${price}\nDuration: ${duration} days`);
+        });
+    </script>
+</body>
+
+</html>
