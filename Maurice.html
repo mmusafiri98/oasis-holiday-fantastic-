@@ -42,16 +42,57 @@
             background: url('fantastico.jpg') no-repeat center center/cover;
             height: 300px;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .banner h2 {
             color: white;
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
             background: rgba(0, 0, 0, 0.5);
             padding: 10px;
             border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input,
+        .date-input,
+        .guest-input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .search-button {
+            padding: 12px 24px;
+            background-color: #006ce4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            flex-shrink: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #005bb5;
         }
 
         .container {
@@ -138,13 +179,53 @@
             .travel-item img {
                 margin: 0 0 15px 0;
             }
+
+            .banner {
+                text-align: center;
+            }
+
+            .search-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+
+
+        footer.text-center {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(40, 144, 170);
+        }
+
+        .social-logos {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-logos img {
+            width: 60px;
+            height: auto;
+        }
+
+        .call-logos {
+            display: flex;
+            justify-content: right;
+            gap: 90px;
+            margin-top: 30px;
+        }
+
+        .call-logos img {
+            width: 60px;
+            height: auto;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Voyage en tout securite avec oasis</h1>
         <img src="Logo Oasis .svg" alt="Logo Oasis Journeys" class="logo" />
         <nav>
             <a href="#">Home</a>
@@ -152,11 +233,19 @@
             <a href="#">Séjours</a>
             <a href="#">Clubs</a>
             <a href="#">Les bons plans</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
 
     <div class="banner">
-        <h2>Explore the ile de Maurice</h2>
+        <h2>Explore the Maurice</h2>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Maurice?">
+            <input type="text" class="date-input" placeholder="Ville de Depart">
+            <input type="text" class="guest-input" placeholder="Date de Depart">
+            <input type="text" class="guest-input" placeholder="Durèe du sejour ">
+            <button class="search-button">recherche</button>
+        </div>
     </div>
 
     <div class="container">
@@ -169,8 +258,74 @@
             <input type="number" id="duration" min="1" max="30" value="7">
 
             <button id="apply-filters">Apply Filters</button>
-        </aside>
+            <form>
+                <h4>Destinations</h4>
+                <label for="eg">ile Maurice</label> <input id="eg" type="checkbox" name="destinantions[]" value="egypte"
+                    checked>
+                <label for="hu">Rodrigues</label> <input id="vo" type="checkbox" name="destinantions[]"
+                    value="Hurghada">
 
+            </form>
+            <form>
+                <h4>Type des voyage</h4>
+                <label for="ci">circuits</label> <input id="eg" type="checkbox" name="destinantions[]" value="egypte"
+                    checked>
+                <label for="cl">club</label> <input id="cl" type="checkbox" name="destinantions[]" value="club">
+                <label for="Ex">Extension</label> <input id="Ex" type="checkbox" name="destinantions[]"
+                    value="Extension" checked>
+                <label for="Se">Sejours</label> <input id="Se" type="checkbox" name="destinantionst[]" value="Sejours">
+            </form>
+            <form>
+                <h4>Gamme des produits</h4>
+                <label for="ci">Club Coralia</label> <input id="eg" type="checkbox" name="destinantions[]"
+                    value="egypte" checked>
+                <label for="cl">Kappa Club</label> <input id="cl" type="checkbox" name="destinantions[]"
+                    value=" Kappa club">
+                <label for="Ka">Kappa Selection</label> <input id="Ka" type="checkbox" name="destinantions[]"
+                    value="Kappa Selection" checked>
+            </form>
+            <form>
+                <h4>Confort</h4>
+                <label for="2"> 2*</label> <input id="2" type="checkbox" name="destinantions[]" value="2" checked>
+                <label for="3"> 3*</label> <input id="3" type="checkbox" name="destinantions[]" value="3">
+                <label for="sup">3 * sup</label> <input id="sup" type="checkbox" name="destinantions[]" value="3 * sup"
+                    checked>
+                <label for="4">4 *</label> <input id="4" type="checkbox" name="destinantions[]" value="4 * ">
+                <label for="4">4 * Luxe</label> <input id="Ka" type="checkbox" name="destinantions[]" value="4 * Luxe"
+                    checked>
+                <label for="4">4 * Sup</label> <input id="Ka" type="checkbox" name="destinantions[]" value="4 * Sup"
+                    checked>
+            </form>
+            <form>
+                <h4>Thématique</h4>
+                <label for="2"> Adult Only</label> <input id="2" type="checkbox" name="destinantions[]"
+                    value="Adult Only" checked>
+                <label for="3"> Bien-être</label> <input id="3" type="checkbox" name="destinantions[]"
+                    value="Bien-être">
+                <label for="Été">Été</label> <input id="sup" type="checkbox" name="destinantions[]" value="Été" checked>
+                <label for="Famille">Famille*</label> <input id="4" type="checkbox" name="destinantions[]"
+                    value="Famille">
+                <label for="Golf">Golf</label> <input id="Go" type="checkbox" name="destinantions[]" value="Golf"
+                    checked>
+                <label for="Voyages de noces">Voyages de noces</label> <input id="Ka" type="checkbox"
+                    name="destinantions[]" value="Voyages de noces" checked>
+            </form>
+            <form>
+                <h4>Pension</h4>
+                <label for="Pe"> Petit Déjeuner</label> <input id="Pe" type="checkbox" name="destinantions[]"
+                    value="Petit Dèjeuner" checked>
+                <label for="Lo">Logement seul</label> <input id="Lo" type="checkbox" name="destinantions[]"
+                    value="Logement seul">
+                <label for="Demi-pension">Demi-pension</label> <input id="sup" type="checkbox" name="destinantions[]"
+                    value="Demi-pension" checked>
+                <label for="demi-pension">demi-pension</label> <input id="4" type="checkbox" name="destinantions[]"
+                    value="demi-pension">
+                <label for="Tout compris">Tout compris</label> <input id="Go" type="checkbox" name="destinantions[]"
+                    value="Tout compris" checked>
+                <label for="Selon programme">Selon programme</label> <input id="Ka" type="checkbox"
+                    name="destinantions[]" value="Selon programme" checked>
+            </form>
+        </aside>
         <section class="results">
             <div class="travel-item">
                 <img src="jersey.jpg" alt="Destination">
@@ -179,6 +334,7 @@
                     <p>Proximity to white sand beaches</p>
                     <p>Lush vegetation and varied activities</p>
                     <p class="price">€859</p>
+                    <button class="search-button">Decouvre</button>
                 </div>
             </div>
 
@@ -189,9 +345,11 @@
                     <p>5-star luxury hotel with pools</p>
                     <p>Includes meals and excursions</p>
                     <p class="price">€1250</p>
+                    <button class="search-button">Decouvre</button>
                 </div>
             </div>
 
+            <!-- Additional travel items -->
             <div class="travel-item">
                 <img src="ricordi.jpg" alt="Destination">
                 <div class="details">
@@ -199,6 +357,7 @@
                     <p>5-star luxury hotel with pools</p>
                     <p>Includes meals and excursions</p>
                     <p class="price">€1050</p>
+                    <button class="search-button">Decouvre</button>
                 </div>
             </div>
             <div class="travel-item">
@@ -208,6 +367,7 @@
                     <p>5-star luxury hotel with pools</p>
                     <p>Includes meals and excursions</p>
                     <p class="price">€745</p>
+                    <button class="search-button">Decouvre</button>
                 </div>
             </div>
             <div class="travel-item">
@@ -217,6 +377,7 @@
                     <p>5-star luxury hotel with pools</p>
                     <p>Includes meals and excursions</p>
                     <p class="price">€775</p>
+                    <button class="search-button">Decouvre</button>
                 </div>
             </div>
             <div class="travel-item">
@@ -226,11 +387,62 @@
                     <p>5-star luxury hotel with pools</p>
                     <p>Includes meals and excursions</p>
                     <p class="price">€812</p>
+                    <button class="search-button">Decouvre</button>
                 </div>
             </div>
+            <div class="travel-item">
+                <img src="ricordi.jpg" alt="Destination">
+                <div class="details">
+                    <h4>Barcelo Bavaro Palace 5</h4>
+                    <p>5-star luxury hotel with pools</p>
+                    <p>Includes meals and excursions</p>
+                    <p class="price">€1050</p>
+                    <button class="search-button">Decouvre</button>
+                </div>
+            </div>
+            <div class="travel-item">
+                <img src="sardina.jpg" alt="Destination">
+                <div class="details">
+                    <h4>Whala!Urban Punta Cana 4 *</h4>
+                    <p>5-star luxury hotel with pools</p>
+                    <p>Includes meals and excursions</p>
+                    <p class="price">€745</p>
+                    <button class="search-button">Decouvre</button>
+                </div>
+            </div>
+            <div class="travel-item">
+                <img src="paesaggio.jpg" alt="Destination">
+                <div class="details">
+                    <h4>Ôclub Zen Adult Only +18 ans HM Alma de Bayahibe 4*</h4>
+                    <p>5-star luxury hotel with pools</p>
+                    <p>Includes meals and excursions</p>
+                    <p class="price">€775</p>
+                    <button class="search-button">Decouvre</button>
+                </div>
+            </div>
+            <div class="travel-item">
+                <img src="stupendo.jpg" alt="Destination">
+                <div class="details">
+                    <h4>HM Alma de Bayahibe - Adults only 4 *</h4>
+                    <p>5-star luxury hotel with pools</p>
+                    <p>Includes meals and excursions</p>
+                    <p class="price">€812</p>
+                    <button class="search-button">Decouvre</button>
+                </div>
+            </div>
+            <button class="search-button">voir plus</button>
         </section>
     </div>
-
+    <!-- Footer -->
+    <footer class="text-center">
+        <h4>Suivez Oasis sur les réseaux sociaux.</h4>
+        <div class="social-logos">
+            <img src="Logo Facebook.svg" alt="Logo Facebook" class="logo">
+            <img src="Logo instagram.svg" alt="Logo Instagram" class="logo">
+            <div class="call-logos">
+                <img src="logo-telefono.svg" alt="Logo telefono" class="logo">
+            </div>
+    </footer>
     <script>
         document.getElementById('apply-filters').addEventListener('click', function () {
             const price = document.getElementById('price-range').value;
