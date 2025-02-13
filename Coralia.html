@@ -43,25 +43,354 @@
             color: white;
             padding: 15px 0;
         }
+
+        header {
+            background-color: rgb(40, 144, 170);
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .banner {
+            background: url('fantastico.jpg') no-repeat center center/cover;
+            height: 300px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Ajustements pour les petits écrans */
+        @media (max-width: 768px) {
+            .banner {
+                min-height: 200px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner {
+                min-height: 150px;
+                padding: 10px;
+            }
+        }
+
+        .banner h2 {
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+        .search-input,
+        .date-input,
+        .guest-input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .search-button {
+            padding: 12px 24px;
+            background-color: rgb(180, 180, 15);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            flex-shrink: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #005bb5;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .filters {
+            width: 100%;
+            max-width: 300px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .filters h3 {
+            margin-top: 0;
+        }
+
+        .filters label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .filters input {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .results {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .travel-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .travel-item img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .travel-item .details {
+            flex: 1;
+        }
+
+        .travel-item .details h4 {
+            margin: 0 0 10px;
+        }
+
+        .travel-item .details p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .travel-item .price {
+            color: #e60000;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .travel-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .travel-item img {
+                margin: 0 0 15px 0;
+            }
+
+            .banner {
+                text-align: center;
+            }
+
+            .search-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+
+
+        footer.text-center {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(40, 144, 170);
+        }
+
+        .social-logos {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-logos img {
+            width: 60px;
+            height: auto;
+        }
+
+        .call-logos {
+            display: flex;
+            justify-content: right;
+            gap: 90px;
+            margin-top: 30px;
+        }
+
+        .call-logos img {
+            width: 60px;
+            height: auto;
+        }
+
+        /* Styles généraux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Barre supérieure */
+        .top-bar {
+            background-color: #2588a6;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        .top-bar a {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* En-tête principal */
+        header {
+            background-color: white;
+            padding: 15px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 140px;
+            width: 140px;
+            margin-right: 10px;
+        }
+
+        /* Liens à droite */
+        .header-links a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .header-links a i {
+            color: #2588a6;
+            margin-right: 5px;
+        }
+
+        /* Barre de navigation */
+        .navbar {
+            background-color: #2588a6;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 15px;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: #1b6b86;
+        }
     </style>
 </head>
 
 <body>
-    <header class="py-3 px-4 d-flex align-items-center justify-content-between">
-        <h1>Voyage en tout sécurité avec Oasis</h1>
-        <img src="Logo Oasis .svg" alt="Logo Oasis Journeys" class="logo" style="width: 100px;">
-        <nav>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link text-white" href="#">Destinations</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Les bons plans</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Circuits</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Clubs</a></li>
-            </ul>
-        </nav>
-        <div class="contact">
-            <p class="text-white mb-0">Besoin d'aide ? <strong>053 28 01 38</strong></p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Barre supérieure avec message et lien -->
+    <div class="top-bar">
+        <p>Voyages d'exception : une sélection d'offres haut de gamme ! <a href="#">Je succombe &gt;&gt;&gt;</a></p>
+    </div>
+
+    <!-- En-tête -->
+    <header>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="Logo Oasis .svg" alt="Logo Oasis" class="logo">
+                <span>Oasis, la compagnie des voyages réussis</span>
+            </div>
+
+            <!-- Liens à droite -->
+            <div class="header-links">
+                <a href="#"><i class="fas fa-heart"></i> <span>💙</span> Mes favoris</a>
+                <a href="#"><i class="fas fa-calendar-alt"></i> <span>📅</span>Ma réservation</a>
+                <a href="#"><i class="fas fa-question-circle"></i> <span>❓</span>Besoin d'aide ?</a>
+                <a href="tel:053280138"><i class="fas fa-phone"></i> <strong>📞</strong> 05 32 80 13 8</a>
+                <a href="information de contact"><i class="fas fa-phone"></i><small>Du lundi au samedi de 9h à
+                        21h</small>
+                    <a href="information de contact"><i class="fas fa-phone"><small>Le dimanche de 10h à 19h</small>
+            </div>
         </div>
     </header>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <a href="#">Séjours</a>
+        <a href="#">Clubs</a>
+        <a href="#">Circuits</a>
+        <a href="#">Les bons plans</a>
+        <a href="#">Destinations</a>
+        <a href="#">Accès</a>
+
+    </nav>
 
     <main class="container mt-4">
         <!-- Hero Section -->
@@ -119,10 +448,12 @@
 
     <!-- Footer -->
     <footer class="text-center">
-        <p>&copy; 2025 Oasis Journeys. Tous droits réservés.</p>
-        <img src="Logo Oasis .svg" alt="Logo Oasis Journeys" class="logo" style="width: 80px;">
-    </footer>
+        <h4>Suivez Oasis sur les réseaux sociaux.</h4>
+        <div class="social-logos">
+            <img src="Logo Facebook.svg" alt="Logo Facebook" class="logo">
+            <img src="Logo instagram.svg" alt="Logo Instagram" class="logo">
 
+    </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
